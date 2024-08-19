@@ -1,0 +1,201 @@
+.modal_feedback {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        & .modal_feedback__container {
+            transform: translate(-50%, -50%);
+
+            @include xxs {
+                transform: translate(0, 10%);
+            }
+        }
+    }
+}
+
+.modal_feedback__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.modal_feedback__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    overflow-y: auto;
+    width: 90%;
+    max-width: 655px;
+    height: 90%;
+    max-height: 503px;
+    padding: 49px 47px 57px 47px;
+    transform: translate(-50%, -40%);
+    transition: transform 0.2s ease-out;
+    background-color: $color_white;
+
+    @include sm {
+        padding: 40px 30px;
+    }
+
+    @include xxs {
+        top: unset;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        min-width: 360px;
+        padding: 36px 15px 57px;
+        transform: none;
+    }
+}
+
+.modal_feedback__title {
+    width: 80%;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 108%;
+
+    @include md {
+        font-size: 32px;
+    }
+
+    @include xs {
+        margin-bottom: 12px;
+        font-size: 26px;
+        line-height: 100%;
+    }
+}
+
+.modal_feedback__subtitle {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 116%;
+
+    @include xs {
+        margin-bottom: 31px;
+        font-size: 16px;
+        line-height: 145%;
+    }
+}
+
+.modal_feedback__close {
+    position: absolute;
+    top: 57px;
+    right: 47px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 1L1 17' stroke='black' stroke-width='1.5' /%3E%3Cpath d='M17 17L1 0.999999' stroke='black' stroke-width='1.5' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.2;
+    transition: opacity 0.2s ease-out;
+
+    @media (hover: hover) {
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    @include sm {
+        top: 40px;
+        right: 30px;
+    }
+}
+
+.modal_feedback__input {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    margin-bottom: 21px;
+    border-bottom: 1px solid rgba(9, 9, 9, 0.2);
+
+    &,
+    &::placeholder {
+        font-size: 18px;
+        line-height: 127%;
+        letter-spacing: -0.03em;
+        color: #090909;
+    }
+
+    @include xs {
+        margin-bottom: 30px;
+        font-size: 18px;
+        line-height: 244%;
+    }
+}
+
+.modal_feedback__submit {
+    display: inline-block;
+    min-width: 240px;
+    min-height: 46px;
+    margin-bottom: 14px;
+    padding: 15px 25px;
+    border-radius: 2px;
+    background-color: $color_blue;
+    color: $color_white;
+    border: 1px solid $color_blue;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 700;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $color_white;
+            color: $color_blue;
+        }
+    }
+
+    @include xxs {
+        width: 100%;
+    }
+}
+
+.modal_feedback__policy {
+    font-size: 11px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #090909;
+
+    span,
+    a {
+        opacity: 0.8;
+    }
+
+    a {
+        text-decoration: underline;
+        transition: opacity 0.2s ease-out;
+
+        @media (hover: hover) {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    @include xxs {
+        font-size: 14px;
+        line-height: 121%;
+    }
+}

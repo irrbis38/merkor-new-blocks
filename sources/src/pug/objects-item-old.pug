@@ -1,0 +1,48 @@
+extends base/_layout
+block vars
+    -
+        var metaDescr = "Спортивно-игровой центр GREEN HILL"
+        var headerInverse = true
+block head
+    title Меркор | Спортивно-игровой центр GREEN HILL
+block page
+
+    <div class="content">
+        <div class="container">
+            <div class="back-link-container">
+                <a href="./objects.html" class="icon-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 12H5" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12 19L5 12L12 5" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>Назад
+                </a>
+            </div>
+            <div class="object-short-info">
+                <div class="h2">Спортивно-игровой центр GREEN HILL</div>
+                <div class="object-short-info-item">
+                    <span>Год </span>2019
+                </div>
+                <div class="object-short-info-item">
+                    <span>Адрес объекта </span>г. Липецк, ул. Гагарина 70Б
+                </div>
+            </div>
+
+            <div class="object-main">
+                <div class="f-carousel object-gallery" id="oCarousel">
+
+                    <a class="f-carousel__slide is-selected" data-thumb-src="./images/objects/gallery/64c282b6194d9.JPG?w=240" href="./images/objects/gallery/64c282b6194d9.JPG" data-fancybox="gallery">
+                        <img src="./images/objects/gallery/64c282b6194d9.JPG" alt="">
+                    </a>
+                    <a class="f-carousel__slide" data-thumb-src="./images/objects/gallery/64c282becf849.JPG?w=240" href="./images/objects/gallery/64c282becf849.JPG" data-fancybox="gallery">
+                        <img src="./images/objects/gallery/64c282becf849.JPG" alt="">
+                    </a>
+                    <a class="f-carousel__slide" data-thumb-src="./images/objects/gallery/64c282f622778.JPG?w=240" href="./images/objects/gallery/64c282f622778.JPG" data-fancybox="gallery">
+                        <img src="./images/objects/gallery/64c282f622778.JPG" alt="">
+                    </a>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>

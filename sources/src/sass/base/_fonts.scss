@@ -1,0 +1,40 @@
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/montserrat-v26-cyrillic-ext_latin-ext-100.woff2")
+            format("woff2"),
+        url("../fonts/montserrat-v26-cyrillic-ext_latin-ext-100.woff")
+            format("woff");
+}
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/montserrat-v26-cyrillic-ext_latin-ext-regular.woff2")
+            format("woff2"),
+        url("../fonts/montserrat-v26-cyrillic-ext_latin-ext-regular.woff")
+            format("woff");
+}
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/montserrat-v26-cyrillic-ext_latin-ext-700.woff2")
+            format("woff2"),
+        url("../fonts/montserrat-v26-cyrillic-ext_latin-ext-700.woff")
+            format("woff");
+}
+
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+.fancybox-container {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-style: normal;
+}

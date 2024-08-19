@@ -1,0 +1,39 @@
+extends base/_layout
+block vars
+    -
+        var metaDescr = "Профессиональный монтаж сэндвич-панелей от компании Меркор. Надежные и опытные специалисты осуществят качественный монтаж вашего проекта. Доверьте свою строительную задачу нам."
+        var headerInverse = false
+        var pageName = "services-metal-structures"
+block head
+    title Меркор | Монтаж
+block page
+
+    <div class="hero hero--pro">
+        <img class="hero--pro-image" src="images/hero-production.jpg" alt="">
+        <div class="container">
+            <div class="hero-title">Производство и монтаж металлоконструкций и&nbsp;резервуаров</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+
+            include ./blocks/_descr_block
+
+
+            include ./blocks/_nservices
+
+
+            include ./blocks/_objects_block
+
+
+            include ./blocks/_benefits_block
+            
+
+            include ./blocks/_request
+
+        </div>
+    </div>
+
+
+    

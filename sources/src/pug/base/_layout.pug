@@ -1,0 +1,76 @@
+include _vars
+include _mixins
+doctype html
+html(lang="ru")
+    block vars
+    head
+        block head
+            title PageTitle
+
+        meta(charset="utf-8")
+        meta(name="keywords" content="")
+        meta(name="description" content= metaDescr)
+
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        //- meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        //- meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" )
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no")
+        meta(name="format-detection" content="telephone=no")
+
+        link(rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon")
+        link(rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png")
+        link(rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png")
+        link(rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png")
+        link(rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-chrome-96x96.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png")
+        link(rel="manifest" href="images/favicons/manifest.json")
+        link(rel="yandex-tableau-widget" href="images/favicons/yandex-browser-manifest.json")
+        meta(name="msapplication-TileColor" content="#ffffff")
+        meta(name="msapplication-TileImage" content="images/favicons/mstile-144x144.png")
+        meta(name="msapplication-config" content="images/favicons/browserconfig.xml")
+        meta(name="theme-color" content="#ffffff")
+        
+        link(rel="stylesheet" href="css/main.min.css")
+
+    body
+        //- .page
+        block header
+            header(class = headerInverse ? "header header--inverse" : "header")
+                include ../blocks/_header
+            include ../blocks/_mobileInfo
+
+        block main
+            include ../blocks/_main
+
+        block footer
+            include ../blocks/_footer
+
+        block js
+            script(src="js/main.min.js")
+
+            if pageName == "services-metal-structures"
+                script(src="./form-submit.js")
+
+            if pageName == "calc"
+                script(src="calc.js")
+
+            if pageName == "contacts"
+                script(src="https://api-maps.yandex.ru/services/coverage/v2/?l=map&amp;ll=38.98479900,45.03909500&amp;z=16&amp;lang=ru_RU&amp;callback=jsonp_yandex_coverage__l_map_ll_38_98479900_45_03909500_z_16_lang_ru_RU")
+
+                script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+
+                script(src="contacts.js")
+
+            if pageName == "objects"
+
+                script(src="objects.js")
+
+        block modal 
+            if pageName == 'index'
+                include ../blocks/_modal_feedback
+
+            if pageName == 'about'
+                include ../blocks/_modal_feedback
+
+

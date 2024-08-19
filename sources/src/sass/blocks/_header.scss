@@ -1,0 +1,105 @@
+.menu-services {
+    padding: 24px;
+
+    a {
+        height: 40px;
+        padding-left: 0;
+    }
+
+    &.menu-services--first {
+        left: 0;
+
+        &::after {
+            left: 43px;
+        }
+    }
+
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+}
+
+.menu-services__item {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        z-index: 2;
+        display: block;
+        width: 100px;
+        height: 250%;
+        transform: translateY(-50%);
+        display: none;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            &::after {
+                display: block;
+            }
+
+            .menu-dropdown {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: -26px;
+    left: calc(100% + 20px);
+    z-index: 3;
+    width: 405px;
+    padding: 24px 35px 24px 24px;
+    border-radius: 8px;
+    background-color: #ededef;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease-out, visibility 0.2s ease-out,
+        transform 0.3s ease-out;
+    transform: translateX(15px);
+
+    a {
+        height: 38px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+
+        &:nth-child(n) {
+            margin-top: 0;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 38px;
+        left: -8px;
+        width: 16px;
+        height: 16px;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41421 9.41421C0.633164 8.63316 0.633165 7.36683 1.41421 6.58579L8 -1.07487e-06L14.5858 6.58579C15.3668 7.36684 15.3668 8.63316 14.5858 9.41421L8 16L1.41421 9.41421Z' fill='%23EDEDEF' /%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+// mobile menu
+
+.mobile-menu-link {
+    font-size: 16px;
+    line-height: 120%;
+}
+
+.mobile-menu__inner-link {
+    font-size: 14px;
+    line-height: 111%;
+    color: #545454;
+}

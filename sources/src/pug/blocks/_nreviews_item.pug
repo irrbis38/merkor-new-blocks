@@ -1,0 +1,19 @@
+.nreviews__item.media-item.section
+
+    .nobjects__media
+
+            .nobjects__preview.video-preview
+                
+                +pictureSize('nreviews/reviews-preview-1', 'jpg', 'x2', 363, 229, 'Превью видео-отызва')
+
+                button.nobjects__video_play.video-play-btn(type="button" aria-label="Начать показ видео")
+                    img(src="./images/icons/video-play.svg" alt="" width="62" height="62" decoding="async" loading="lazy")
+
+            .nobjects__video.video-block(data-video="https://vk.com/video-66369027_456239546")
+
+
+    .nreviews__descr
+
+        p.nreviews__name АО Тандер
+
+        p.nreviews__person Игорь Карачаев, заместитель генерального директора

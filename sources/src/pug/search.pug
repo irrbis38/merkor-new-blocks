@@ -1,0 +1,41 @@
+extends base/_layout
+block vars
+    -
+        var metaDescr = "Результаты поиска"
+        var headerInverse = true
+block head
+    title Меркор | Результаты поиска
+block page
+
+    <div class="content">
+        <div class="container">
+            <div class="back-link-container">
+                <a href="#" class="icon-link" onclick="window.history.back()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 12H5" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12 19L5 12L12 5" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg> Назад
+                </a>
+            </div>
+            <div class="row main-row">
+                <div class="col-5">
+                    <h1>Поиск</h1>
+                </div>
+                <div class="col-7">
+                    <div class="main-search">
+                        <div class="main-search-input">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M21.0009 21.0001L16.6509 16.6501" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <input type="text" class="form-control" placeholder="Поиск" value="">
+                        </div>
+                        <div class="main-search-result">
+                            <a href="#">Поставщик сэндвич-панелей</a>
+                            <a href="#">Производство сэндвич-панелей</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,28 @@
+-
+    const partnersList = [
+        {icon: 'npartners/partner-logo-1', name: 'Производитель стали'},
+        {icon: 'npartners/partner-logo-2', name: 'Роснефть'},
+        {icon: 'npartners/partner-logo-3', name: 'Нефтяная компания'},
+        {icon: 'npartners/partner-logo-4', name: 'МВУ'},
+        {icon: 'npartners/partner-logo-5', name: 'PIR-компоненты и клей'},
+        {icon: 'npartners/partner-logo-6', name: 'Оборудование для производства сэнвич-панелей'},
+        {icon: 'npartners/partner-logo-1', name: 'Производитель стали'},
+        {icon: 'npartners/partner-logo-2', name: 'Роснефть'},
+    ]
+
+.npartners
+
+    h2.h2.npartners__title Партнеры
+
+    ul.npartners__list
+
+        each item in partnersList
+
+            li.npartners__item 
+
+                +pictureSize(item.icon, 'png', 'x2', 343, 239, 'Логотип партнёра')
+
+                p.npartners__name= item.name
+
+    button.nobjects__link.js-open-modal(type="button") Стать нашим партнером
+

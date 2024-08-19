@@ -1,0 +1,184 @@
+extends base/_layout
+block vars
+    -
+        var metaDescr = "Узнайте больше о компании Меркор — ведущем производителе сэндвич-панелей. Мы предлагаем качественные решения для строительства, обеспечивая надежность и инновации. Опыт и профессионализм на вашей стороне."
+        var headerInverse = false
+        var pageName = 'about'
+
+block head
+    title Меркор | Компания
+block page
+
+    <div class="hero hero--panel hero--pro about-slide">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img class="hero--pro-image" src="./images/company/slider/64b52e0f0b44e.jpg" alt="">
+                    <div class="container">
+                        <div class="hero-title">Компания</div>
+                        <div class="hero-subtitle">
+                            <p>Меркор предлагает комплексные поставки материалов для строительства зданий из металлоконструкций и&nbsp;трехслойных сэндвич-панелей с наполнением PIR и&nbsp;минеральной базальтовой плиты.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="hero--pro-image" src="./images/company/slider/64b52e2009c1a.jpg" alt="">
+                    <div class="container">
+                        <div class="hero-title">Компания</div>
+                        <div class="hero-subtitle">
+                            <p>Меркор предлагает комплексные поставки материалов для строительства зданий из металлоконструкций и&nbsp;трехслойных сэндвич-панелей с наполнением PIR и&nbsp;минеральной базальтовой плиты.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="hero--pro-image" src="./images/company/slider/64b52e2cb9751.jpg" alt="">
+                    <div class="container">
+                        <div class="hero-title">Компания</div>
+                        <div class="hero-subtitle">
+                            <p>Меркор предлагает комплексные поставки материалов для строительства зданий из металлоконструкций и&nbsp;трехслойных сэндвич-панелей с наполнением PIR и&nbsp;минеральной базальтовой плиты.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="hero--pro-image" src="./images/company/slider/64b52e3ab4fe8.jpg" alt="">
+                    <div class="container">
+                        <div class="hero-title">Компания</div>
+                        <div class="hero-subtitle">
+                            <p>Меркор предлагает комплексные поставки материалов для строительства зданий из металлоконструкций и&nbsp;трехслойных сэндвич-панелей с наполнением PIR и&nbsp;минеральной базальтовой плиты.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="hero--pro-image" src="./images/company/slider/64b52e464abbc.jpg" alt="">
+                    <div class="container">
+                        <div class="hero-title">Компания</div>
+                        <div class="hero-subtitle">
+                            <p>Меркор предлагает комплексные поставки материалов для строительства зданий из металлоконструкций и&nbsp;трехслойных сэндвич-панелей с наполнением PIR и&nbsp;минеральной базальтовой плиты.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="about-slide-actions">
+            <div class="container">
+                <div class="prev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="slide-pagination"></div>
+                <div class="next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            include ./blocks/_company
+        </div>
+
+
+
+        <div class="letters">
+            <div class="container">
+                <div class="h2">Благодарственные письма</div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="./images/company/gratitude/64b53442650f0.jpg" data-fancybox="">
+                            <img src="./images/company/gratitude/64b53442650f0.jpg?w=640" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./images/company/gratitude/64b534522966a.jpg" data-fancybox="">
+                            <img src="./images/company/gratitude/64b534522966a.jpg?w=640" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./images/company/gratitude/64b53486e8fca.jpg" data-fancybox="">
+                            <img src="./images/company/gratitude/64b53486e8fca.jpg?w=640" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        .container 
+            include ./blocks/_nreviews
+
+
+        <div class="container">
+            <div class="docs">
+                <img src="images/svg/docs-title.svg" alt="" class="docs-title">
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+
+                        <div class="swiper-slide">
+                            <a href="./images/company/documentation/64b531e445b82.jpg" data-fancybox="">
+                                <img src="./images/company/documentation/64b531e445b82.jpg?w=640" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./images/company/documentation/64b531f7e9b97.jpg" data-fancybox="">
+                                <img src="./images/company/documentation/64b531f7e9b97.jpg?w=640" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./images/company/documentation/64b5321acebac.jpg" data-fancybox="">
+                                <img src="./images/company/documentation/64b5321acebac.jpg?w=640" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./images/company/documentation/64b5327ac5aa3.jpg" data-fancybox="">
+                                <img src="./images/company/documentation/64b5327ac5aa3.jpg?w=640" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./images/company/documentation/64b5329582025.jpg" data-fancybox="">
+                                <img src="./images/company/documentation/64b5329582025.jpg?w=640" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./images/company/documentation/64b532f36b6e9.jpg" data-fancybox="">
+                                <img src="./images/company/documentation/64b532f36b6e9.jpg?w=640" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./images/company/documentation/64b5331533ff5.jpg" data-fancybox="">
+                                <img src="./images/company/documentation/64b5331533ff5.jpg?w=640" alt="">
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                    <div class="slide-navigation">
+                        <div class="prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        .container
+            include ./blocks/_npartners
+
+    </div>

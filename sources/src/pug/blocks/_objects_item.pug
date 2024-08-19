@@ -1,0 +1,73 @@
+article.nobjects__item.media-item
+
+    a.nobjects__item_link(href="#")
+
+    h3.nobjects__heading
+        span.nobjects__text Магнит
+        span.nobjects__arrow
+
+    .nobjects__media
+
+        .nobjects__slider.swiper
+
+            .nobjects__nav 
+                button.nobjects__prev(type="button" aria-label="Показать предыдущий слайд")
+                button.nobjects__next(type="button" aria-label="Показать следующий слайд")
+
+            .nobjects__slider_wrapper.swiper-wrapper 
+
+                //- slide 1
+
+                .nobjects__slide.swiper-slide
+
+                        .nobjects__preview.video-preview
+                            
+                            +pictureSize('objects/video-preview', 'jpg', 'x2', 614, 388, 'Превью видео-обзора')
+
+                            button.nobjects__video_play.video-play-btn(type="button" aria-label="Начать показ видео")
+                                img(src="./images/icons/video-play.svg" alt="" width="62" height="62" decoding="async" loading="lazy")
+
+                        .nobjects__video.video-block(data-video="https://vk.com/video-66369027_456239546")
+                        
+
+                //- slide 2
+
+                .nobjects__slide.swiper-slide
+
+                        .nobjects__picture
+                            
+                            +pictureSize('objects/object-picture-1', 'jpg', 'x2', 614, 388, 'Фото объекта')
+
+
+                //- slide 3
+
+                .nobjects__slide.swiper-slide
+
+                        .nobjects__picture
+                            
+                            +pictureSize('objects/object-picture-2', 'jpg', 'x2', 614, 388, 'Фото объекта')
+
+
+    .nobjects__descr
+
+        span.nobjects__point 
+
+            span.nobjects__name Местоположение: 
+
+            span.nobjects__value ул. Северная 452 
+
+        span.nobjects__point 
+
+            span.nobjects__name Сроки поставки: 
+
+            span.nobjects__value 14 дней
+
+        span.nobjects__point 
+
+            span.nobjects__name Дополнительная информация: 
+
+            span.nobjects__value Материалы изготовлены на нешем заводе. Доставка и монтаж выполнены нашими сотрудниками за короткие сроки.
+
+
+
+

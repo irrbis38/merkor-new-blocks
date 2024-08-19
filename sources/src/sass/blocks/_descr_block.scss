@@ -1,0 +1,21 @@
+.descr__block {
+    margin-bottom: 97px;
+
+    @include sm {
+        margin-bottom: 64px;
+    }
+
+    h2 {
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 145%;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+}

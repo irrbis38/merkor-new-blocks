@@ -1,0 +1,41 @@
+.npartners__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+
+    @include md {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include sm {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 38px;
+    }
+
+    @include xxs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.npartners__item {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.npartners__name {
+    padding: 0 26px 47px;
+    font-size: 16px;
+    line-height: 145%;
+
+    @include xs {
+        padding: 0 27px 51px;
+    }
+}

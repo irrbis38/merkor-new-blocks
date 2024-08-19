@@ -1,0 +1,133 @@
+extends base/_layout
+block vars
+    -
+        var metaDescr = "Спортивно-игровой центр GREEN HILL"
+        var headerInverse = true
+block head
+    title Меркор | Спортивно-игровой центр GREEN HILL
+block page
+
+    <div class="content">
+        <div class="container">
+            <div class="back-link-container">
+                <a href="./objects.html" class="icon-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 12H5" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12 19L5 12L12 5" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>Назад
+                </a>
+            </div>
+
+
+            .nobjects-item__main.section
+
+
+                h2.nobjects-item__title Магнит
+
+
+                .nobjects-item__sliders
+
+                    .nobjects__slider.nobjects-item__full.swiper
+
+                        .nobjects__nav 
+                            button.nobjects__prev.js-prev-btn(type="button" aria-label="Показать предыдущий слайд")
+                            button.nobjects__next.js-next-btn(type="button" aria-label="Показать следующий слайд")
+
+                        .nobjects__slider_wrapper.swiper-wrapper 
+
+                            //- slide 1
+
+                            .nobjects__slide.nobjects-item__full-slide.swiper-slide.media-item
+
+                                    .nobjects__preview.video-preview
+                                        
+                                        +pictureSize('objects/video-preview', 'jpg', 'x2', 789, 498, 'Превью видео-отзыва')
+
+                                        button.nobjects__video_play.video-play-btn(type="button" aria-label="Начать показ видео")
+                                            img(src="./images/icons/video-play.svg" alt="" width="80" height="80" decoding="async" loading="lazy")
+
+                                    .nobjects__video.video-block(data-video="https://vk.com/video-66369027_456239546")
+
+                            -
+                                counter = 1
+
+
+                            while counter < 9
+
+                                .nobjects__slide.nobjects-item__full-slide.swiper-slide
+
+                                        .nobjects__picture
+                                            
+                                            +pictureSize('objects/object-picture-' + counter, 'jpg', 'x2', 614, 388, 'Фото объекта')
+
+                                - counter = counter + 1
+
+
+
+
+                    .nobjects-item__preview.swiper
+
+                        .swiper-wrapper
+
+                            .nobjects-item__preview-slide.preview-slide-with-video.swiper-slide                                
+
+                                +pictureSize('objects/video-preview-mob', 'jpg', 'x2', 100, 65, 'Превью')
+
+
+                            -
+                                const previews = [1, 2, 3, 4, 5, 6, 7 ,8]
+
+
+                            each num in previews
+
+                                .nobjects-item__preview-slide.swiper-slide                                
+
+                                    +pictureSize('objects/object-preview-' + num, 'jpg', 'x2', 100, 65, 'Превью')
+
+
+
+                .nobjects-item__descr
+
+                    p.nobjects-item__point
+                        span.nobjects-item__name Месторасположение:  
+                        span.nobjects-item__value ул. Северная 452
+
+                    p.nobjects-item__point
+                        span.nobjects-item__name Срок изготовления: 
+                        span.nobjects-item__value 14 дней
+
+                    p.nobjects-item__point.nobjects-item__point--add
+                        span.nobjects-item__name Дополнительная информация: 
+                        span.nobjects-item__value Материалы изготовлены на нешем заводе. Доставка и монтаж выполнены нашими сотрудниками за короткие сроки.
+
+
+            .nobjects-item__review
+
+                h2.nobjects-item__title Отзыв
+
+
+                .nobjects-item__media.media-item
+
+                    .nobjects__preview.video-preview
+                        
+                        +pictureSize('objects/video-preview', 'jpg', 'x2', 585, 369, 'Превью видео-отзыва')
+
+                        button.nobjects__video_play.video-play-btn(type="button" aria-label="Начать показ видео")
+                            img(src="./images/icons/video-play.svg" alt="" width="80" height="80" decoding="async" loading="lazy")
+
+                    .nobjects__video.video-block(data-video="https://vk.com/video-66369027_456239546")
+
+
+                .nobjects-item__content
+
+                    p.nobjects-item__cite «Магнит» является уникальной компанией в российском ритейле. Наряду с продажей товаров розничная сеть занимается производством продуктов питания под собственными торговыми марками.
+
+                    p.nobjects-item__author Игорь Карачаев, заместитель генерального директора
+
+
+
+
+
+
+        </div>
+    </div>

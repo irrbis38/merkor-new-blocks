@@ -1,0 +1,34 @@
+-
+    const nservicesData = [
+        {picture: 'nservices/nservices-picture-1', name: 'Изготовление металлоконструкций из черного металла'},
+        {picture: 'nservices/nservices-picture-2', name: 'Изготовление каркасов ЛСТК'},
+        {picture: 'nservices/nservices-picture-3', name: 'Монтаж металлоконструкций'},
+        {picture: 'nservices/nservices-picture-1', name: 'Изготовление металлоконструкций из черного металла'},
+        {picture: 'nservices/nservices-picture-1', name: 'Изготовление металлоконструкций из черного металла'},
+        {picture: 'nservices/nservices-picture-2', name: 'Изготовление каркасов ЛСТК'},
+        {picture: 'nservices/nservices-picture-3', name: 'Монтаж металлоконструкций'},
+        {picture: 'nservices/nservices-picture-1', name: 'Изготовление металлоконструкций из черного металла'},
+    ]
+
+.nservices
+
+    h2.h2.nservices__title Услуги
+
+    .nservices__wrapper
+
+        .nservices__list 
+
+            each item in nservicesData
+
+                a.nservices__item(href="#")
+
+                    span.nservices__picture
+                        +pictureSize(item.picture, 'jpg', 'x2', 321, 279, 'Фото услуги')
+
+                    span.nservices__name= item.name
+
+        button.nservices__more.nobjects__link(type="button") Показать больше
+
+    h3.nservices__inner_title Производство металлоконструкций
+
+    p.nservices__text Дополнительная герметизация силиконовым герметиком или специальным бутилкаучуковым шнуром для повышения влагозащиты и уменьшения теплопотери.

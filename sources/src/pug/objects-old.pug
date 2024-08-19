@@ -1,0 +1,28 @@
+extends base/_layout
+block vars
+    -
+        var metaDescr = "Мы предоставляем сэндвич-панели для различных объектов: от промышленных сооружений до коммерческих комплексов. Убедитесь в качестве и надежности наших решений."
+        var headerInverse = true
+        var pageName = "objects"
+block head
+    title Меркор | Объекты
+block page
+
+    <div class="content">
+        <div class="container">
+            <div class="h2">Объекты</div>
+            <div class="objects-row">
+                <div>
+                    <a href="./objects-item.html" class="object-item">
+                        <img src="./images/objects/cover/64c282cb5bdab.JPG" alt="">
+                        <span>Спортивно-игровой центр GREEN HILL</span>
+                    </a>
+                </div>
+            </div>
+            <div id="showmore-triger"></div>
+            <div class="loader" style="display: none;">
+                <img src="images/loader.png" alt=""> Загружаем <br>объекты...
+            </div>
+        </div>
+
+    </div>
