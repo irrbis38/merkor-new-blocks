@@ -76,13 +76,19 @@ var objectItemInit = (container) => {
     }
 };
 
-var modalInit = (modal, showModalBtn) => {
-    showModalBtn.addEventListener("click", () => {
-        modal.classList.add("is-active");
-        document.body.classList.add("lock");
-    });
+var modalInit = (modal, btn) => {
+    const showModalBtn = btn || null;
 
-    var closeBtn = document.querySelectorAll(".js-modal-close");
+    modal &&
+        showModalBtn &&
+        showModalBtn.addEventListener("click", () => {
+            modal.classList.add("is-active");
+            document.body.classList.add("lock");
+        });
+
+    var closeBtn = modal.querySelectorAll(".js-modal-close");
+
+    console.log(closeBtn);
 
     closeBtn.length > 0 &&
         closeBtn.forEach((btn) => {
@@ -143,6 +149,25 @@ var reviewsSliderInit = (container) => {
     });
 };
 
+var initDropdownMenu = () => {
+    var dropdownLinks = document.querySelectorAll(".js-service-link");
+    var dropdownMenues = document.querySelectorAll(".menu-services");
+
+    if (dropdownLinks.length < 1) return;
+
+    dropdownLinks.forEach((dropdown) => {
+        dropdown.addEventListener("mouseenter", (e) => {
+            e.preventDefault();
+            const dropdownMenu = dropdown.nextElementSibling;
+            dropdownMenues.forEach((menu) =>
+                menu === dropdownMenu
+                    ? menu.classList.add("active")
+                    : menu.classList.remove("active")
+            );
+        });
+    });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     var objectsItems = document.querySelectorAll(".media-item");
 
@@ -154,11 +179,18 @@ document.addEventListener("DOMContentLoaded", () => {
     var videos = Array.from(document.querySelectorAll(".video-block"));
     videos.length > 0 && initVKVideo(videos);
 
-    var showModalBtn = document.querySelector(".js-open-modal");
-    var modal = document.querySelector(".js-modal-feedback");
+    // init feedback modal
+    var showModalFeedbackBtn = document.querySelector(".js-open-modal");
+    var modalFeedback = document.querySelector(".js-modal-feedback");
 
-    // init modal
-    modal && showModalBtn && modalInit(modal, showModalBtn);
+    modalFeedback &&
+        showModalFeedbackBtn &&
+        modalInit(modalFeedback, showModalFeedbackBtn);
+
+    // init confirm modal
+    var modalConfirm = document.querySelector(".js-modal-confirm");
+
+    modalConfirm && modalInit(modalConfirm, null);
 
     // init toggle products group
     initProductsGroup();
@@ -179,4 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fullSliderContainers.forEach((container) => {
             reviewsSliderInit(container);
         });
+
+    // init dropdown menu
+    initDropdownMenu();
 });
