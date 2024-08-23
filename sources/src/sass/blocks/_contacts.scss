@@ -1,0 +1,119 @@
+.contacts__wrapper {
+    display: grid;
+    grid-template-columns: 30% 60.4%;
+    grid-template-rows: auto auto 1fr;
+    gap: 0 9.6%;
+    grid-template-areas:
+        "title title"
+        "card map"
+        "adresses map";
+
+    margin-top: 40px;
+
+    @include sm {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "title"
+            "card"
+            "map"
+            "adresses";
+    }
+}
+
+.contacts__title {
+    grid-area: title;
+}
+
+.contacts__organization_card {
+    grid-area: card;
+}
+
+.contacts__adresses {
+    grid-area: adresses;
+}
+
+.contacts__map {
+    grid-area: map;
+}
+
+.content.contacts__content {
+    @include xs {
+        padding-top: 97px;
+    }
+}
+
+.contacts__title {
+    margin-bottom: 34px;
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 100%;
+
+    @include sm {
+        font-size: 40px;
+    }
+
+    @include xs {
+        margin-bottom: 22px;
+        font-size: 30px;
+    }
+}
+
+.contacts__organization_card {
+    margin-bottom: 35px;
+
+    @include sm {
+        margin-bottom: 21px;
+    }
+}
+
+.contacts__map {
+    &.contacts-city {
+        margin-top: 0;
+
+        & .map_zone {
+            height: 333px;
+
+            @include xxs {
+                height: 204px;
+            }
+        }
+    }
+
+    @include sm {
+        margin-bottom: 30px;
+    }
+}
+
+.contacts__adresses {
+    .contacts-city:first-child {
+        margin-top: 0;
+    }
+
+    .contacts-city-line {
+        gap: 16px 0;
+
+        & > * {
+            margin-bottom: 0;
+            gap: 16px 0;
+        }
+    }
+
+    .contacts-city {
+        margin-top: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+
+            @include xs {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.contacts-city-title {
+    @include xs {
+        font-size: 22px;
+    }
+}

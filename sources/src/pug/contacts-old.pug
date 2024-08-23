@@ -8,24 +8,27 @@ block head
     title Меркор | Контакты
 block page
 
-    <div class="content contacts__content">
+    <div class="content">
         <div class="container">
+            <div class="row main-row">
+                <div class="col-5">
+                    <h1>Контакты</h1>
+                    <div class="back-link-container">
+                        <a download target="_blank" href="./files/Merkor-partners-card.pdf" class="icon-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7 10L12 15L17 10" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M12 15V3" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg> Скачать карточку организации
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-            .contacts__wrapper 
 
-                h1.contacts__title Контакты
+            <div class="row main-row">
+                <div class="col-5">
 
-                .back-link-container.contacts__organization_card 
-
-                    a.icon-link(download target="_blank" href="./files/Merkor-partners-card.pdf")
-                        svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
-                            path(d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-                            path(d="M7 10L12 15L17 10" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-                            path(d="M12 15V3" stroke="#00B2E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-                        | Скачать карточку организации
-
-
-                .contacts__adresses 
                     <div class="contacts-city">
                         <div class="contacts-city-title">Краснодар</div>
                         <div class="contacts-city-line">
@@ -50,7 +53,6 @@ block page
                         </div>
                     </div>
 
-
                     <div class="contacts-city">
                         <div class="contacts-city-title">Липецк</div>
                         <div class="contacts-city-line">
@@ -68,9 +70,18 @@ block page
                             </a>
                         </div>
                     </div>
-
-                <div class="contacts-city contacts__map">
-                    <div class="map_zone" data-id="3" data-lat="45.039095" data-lng="38.984799" id="map_3"></div>
+                    
                 </div>
+
+                <div class="col-7">
+
+                    <div class="contacts-city">
+                        <div class="map_zone" data-id="3" data-lat="45.039095" data-lng="38.984799" id="map_3"></div>
+                    </div>
+
+
+
+                </div>
+            </div>
         </div>
     </div>

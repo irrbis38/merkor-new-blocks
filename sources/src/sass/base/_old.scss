@@ -1757,18 +1757,21 @@ h1 {
     position: absolute;
     z-index: 1;
     pointer-events: none;
-    width: 586px;
+    // width: 586px;
+    width: 490px;
     display: block;
 }
 
 .hero--home-line--blue {
-    margin-right: 150px;
+    // margin-right: 150px;
+    margin-right: 120px;
     bottom: 0;
     right: 0;
 }
 
 .hero--home-line--yellow {
-    margin-bottom: -142px;
+    // margin-bottom: -142px;
+    margin-bottom: -80px;
     margin-right: -157px;
     right: 0;
     bottom: 0;
@@ -1833,7 +1836,7 @@ h1 {
 
 @media (max-width: 899px) {
     .hero--home {
-        height: 100vh;
+        height: 100dvh;
         min-height: 600px;
         padding-top: 130px;
     }
