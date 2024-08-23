@@ -320,6 +320,8 @@
 
     @include xs {
         font-size: 26px;
+        text-shadow: unset;
+        color: $color_blue;
     }
 }
 
@@ -355,6 +357,10 @@
         border-right: 2px solid $color_blue;
         border-bottom: 2px solid $color_blue;
         transform: translateY(-50%) rotate(-45deg);
+    }
+
+    @include xs {
+        opacity: 1;
     }
 }
 

@@ -1088,7 +1088,7 @@ body {
 
 .mobile-info .mobile-info-link {
     font-size: 32px;
-    margin-top: 25px;
+    margin-top: 81px;
     font-weight: 700;
 }
 
@@ -2306,6 +2306,7 @@ h1 {
 @media (max-width: 899px) {
     .home-process {
         margin-bottom: 64px;
+        overflow: hidden;
     }
 
     .home-process .process-item {

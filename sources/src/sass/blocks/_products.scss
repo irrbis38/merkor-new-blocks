@@ -1,0 +1,21 @@
+.products__group {
+    @include r(599px) {
+        .products:nth-child(2) {
+            display: none;
+        }
+
+        &.is-shown {
+            .products:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+}
+
+.products__group_more {
+    display: none;
+
+    @include r(599px) {
+        display: block;
+    }
+}

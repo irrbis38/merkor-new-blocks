@@ -88,8 +88,6 @@ var modalInit = (modal, btn) => {
 
     var closeBtn = modal.querySelectorAll(".js-modal-close");
 
-    console.log(closeBtn);
-
     closeBtn.length > 0 &&
         closeBtn.forEach((btn) => {
             btn.addEventListener("click", () => {

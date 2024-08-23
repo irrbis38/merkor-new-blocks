@@ -206,28 +206,6 @@ input[type="search"]::-webkit-search-results-decoration {
     }
 }
 
-.products__group {
-    @include xxs {
-        .products:nth-child(2) {
-            display: none;
-        }
-
-        &.is-shown {
-            .products:nth-child(2) {
-                display: block;
-            }
-        }
-    }
-}
-
-.products__group_more {
-    display: none;
-
-    @include xxs {
-        display: block;
-    }
-}
-
 .media-item.is-hover {
     .video-preview::after {
         opacity: 0;
