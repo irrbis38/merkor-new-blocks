@@ -3589,7 +3589,7 @@ body {
 }
 .mobile-info .mobile-info-link {
   font-size: 32px;
-  margin-top: 25px;
+  margin-top: 81px;
   font-weight: 700
 }
 .mobile-info .mobile-info-link:hover {
@@ -4563,7 +4563,8 @@ h1 {
 }
 @media (max-width:899px) {
   .home-process {
-    margin-bottom: 64px
+    margin-bottom: 64px;
+    overflow: hidden
   }
   .home-process .process-item {
     width: 100%
@@ -8764,22 +8765,6 @@ input[type=search]::-webkit-search-results-decoration {
     margin-bottom: 64px
   }
 }
-@media (max-width:575px) {
-  .products__group .products:nth-child(2) {
-    display: none
-  }
-  .products__group.is-shown .products:nth-child(2) {
-    display: block
-  }
-}
-.products__group_more {
-  display: none
-}
-@media (max-width:575px) {
-  .products__group_more {
-    display: block
-  }
-}
 .media-item.is-hover .video-preview::after {
   opacity: 0
 }
@@ -9071,10 +9056,15 @@ input[type=search]::-webkit-search-results-decoration {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0 9px;
+  gap: 0 5px;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center
+}
+.footer__developed img {
+  display: inline-block;
+  width: 62px;
+  height: auto
 }
 @media (max-width:767px) {
   .footer__developed {
@@ -9416,7 +9406,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width:767px) {
   .nobjects__heading {
-    font-size: 26px
+    font-size: 26px;
+    text-shadow: unset;
+    color: #00b2e3
   }
 }
 .nobjects__text {
@@ -9455,6 +9447,11 @@ input[type=search]::-webkit-search-results-decoration {
   border-bottom: 2px solid #00b2e3;
   -webkit-transform: translateY(-50%) rotate(-45deg);
   transform: translateY(-50%) rotate(-45deg)
+}
+@media (max-width:767px) {
+  .nobjects__arrow {
+    opacity: 1
+  }
 }
 .nobjects__point {
   display: block
@@ -10292,7 +10289,7 @@ input[type=search]::-webkit-search-results-decoration {
 @media (max-width:767px) {
   .nservices__inner_title_small {
     margin-bottom: 16px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 104%
   }
 }
@@ -10714,6 +10711,22 @@ input[type=search]::-webkit-search-results-decoration {
 @media (max-width:767px) {
   .contacts-city-title {
     font-size: 22px
+  }
+}
+@media only screen and (max-width:599px) {
+  .products__group .products:nth-child(2) {
+    display: none
+  }
+  .products__group.is-shown .products:nth-child(2) {
+    display: block
+  }
+}
+.products__group_more {
+  display: none
+}
+@media only screen and (max-width:599px) {
+  .products__group_more {
+    display: block
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
