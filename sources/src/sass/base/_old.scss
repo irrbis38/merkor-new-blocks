@@ -4964,6 +4964,10 @@ h1 {
     }
 }
 
+.pro-process__section {
+    overflow: hidden;
+}
+
 .pro-process {
     margin-bottom: -30px;
     position: relative;
@@ -5047,6 +5051,12 @@ h1 {
     margin-left: 25%;
     white-space: nowrap;
     justify-content: flex-end;
+}
+
+@media (max-width: 899px) {
+    .pro-process .process-item--7 {
+        white-space: normal;
+    }
 }
 
 .pro-process .process-item--7 .process-item-image {
@@ -5203,9 +5213,9 @@ h1 {
 
 @media (max-width: 899px) {
     .pro-process .process-item {
-        margin-left: -15px;
+        // margin-left: -15px;
         padding-left: 15px;
-        margin-right: -15px;
+        // margin-right: -15px;
         padding-right: 15px;
     }
 }
@@ -5409,6 +5419,10 @@ h1 {
     .letters {
         margin-bottom: 64px;
     }
+}
+
+.docs__container {
+    overflow: hidden;
 }
 
 .docs-title {
