@@ -211,3 +211,28 @@ input[type="search"]::-webkit-search-results-decoration {
         opacity: 0;
     }
 }
+
+.policy__container {
+    h1,
+    h2,
+    p,
+    ul,
+    ol,
+    li {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    h1 {
+        @include sm {
+            font-size: 25px;
+        }
+    }
+
+    h2 {
+        @include sm {
+            font-size: 22px;
+        }
+    }
+}
