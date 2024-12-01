@@ -10757,4 +10757,122 @@ input[type=search]::-webkit-search-results-decoration {
     display: block
   }
 }
+.good_item {
+  padding: 69px 0
+}
+@media (max-width:767px) {
+  .good_item {
+    padding: 50px 0
+  }
+}
+.good_item__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: auto auto;
+  gap: 28px 66px;
+  grid-template-areas: "title picture" "descr picture"
+}
+@media (max-width:1300px) {
+  .good_item__wrapper {
+    gap: 20px 30px
+  }
+}
+@media (max-width:991px) {
+  .good_item__wrapper {
+    display: block
+  }
+}
+.good_item__title {
+  grid-area: title;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 110%;
+  color: #0e0e0e;
+  text-wrap: balance
+}
+@media (max-width:1200px) {
+  .good_item__title {
+    font-size: 42px
+  }
+}
+@media (max-width:991px) {
+  .good_item__title {
+    margin-bottom: 20px
+  }
+}
+@media (max-width:767px) {
+  .good_item__title {
+    font-size: 26px
+  }
+}
+.good_item__picture {
+  grid-area: picture
+}
+.good_item__picture img,
+.good_item__picture picture {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden
+}
+@media (max-width:991px) {
+  .good_item__picture {
+    max-width: 600px;
+    margin-bottom: 30px
+  }
+}
+.good_item__descr {
+  grid-area: descr;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  color: #0e0e0e
+}
+.good_item__descr p:not(:last-child) {
+  margin-bottom: 16px
+}
+@media (max-width:991px) {
+  .good_item__descr {
+    max-width: 673px
+  }
+}
+@media (max-width:767px) {
+  .good_item__descr {
+    font-size: 16px;
+    line-height: 145%
+  }
+}
+.good_item__btn {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 46px;
+  margin-top: 40px;
+  padding: 5px 25px;
+  border-radius: 2px;
+  font-size: 16px;
+  background: #00b2e3;
+  border: 2px solid #00b2e3;
+  color: #fff;
+  transition: all .2s ease-out
+}
+@media (hover:hover) {
+  .good_item__btn:hover {
+    background: #fff;
+    color: #00b2e3
+  }
+}
+@media (max-width:767px) {
+  .good_item__btn {
+    width: 100%;
+    margin-top: 38px
+  }
+}
 /*# sourceMappingURL=maps/main.css.map */
