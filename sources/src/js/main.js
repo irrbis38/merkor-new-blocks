@@ -185,6 +185,16 @@ document.addEventListener("DOMContentLoaded", () => {
         showModalFeedbackBtn &&
         modalInit(modalFeedback, showModalFeedbackBtn);
 
+    // init calculation modal
+    var showModalCalculationBtn = document.querySelector(
+        ".js-open-modal-calculation"
+    );
+    var modalCalculation = document.querySelector(".js-modal-calculation");
+
+    modalCalculation &&
+        showModalCalculationBtn &&
+        modalInit(modalCalculation, showModalCalculationBtn);
+
     // init confirm modal
     var modalConfirm = document.querySelector(".js-modal-confirm");
 

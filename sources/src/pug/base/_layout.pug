@@ -30,7 +30,7 @@ html(lang="ru")
         meta(name="msapplication-TileImage" content="images/favicons/mstile-144x144.png")
         meta(name="msapplication-config" content="images/favicons/browserconfig.xml")
         meta(name="theme-color" content="#ffffff")
-        
+
         link(rel="stylesheet" href="css/main.min.css")
 
     body
@@ -69,6 +69,7 @@ html(lang="ru")
         block modal 
             if pageName == 'index'
                 include ../blocks/_modal_feedback
+                include ../blocks/_modal_calculation
 
             if pageName == 'confirm-sending'
                 include ../blocks/_modal_feedback
